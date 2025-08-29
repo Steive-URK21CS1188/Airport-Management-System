@@ -1,7 +1,6 @@
 # ✈️ Airport Management System
 
 A full-stack **Airport Management System** built using **Spring Boot (Java), React.js, MySQL, TailwindCSS, and Eureka for microservices discovery**.  
-This project was developed as a **team of 5**, with each member handling separate modules.  
 
 ---
 
@@ -27,11 +26,6 @@ This project was developed as a **team of 5**, with each member handling separat
 - **Database**: MySQL  
 - **Tools**: Git, Postman, Maven  
 
----
-
-## 👨‍💻 My Contributions
-I was responsible for the **Plane Module, Plane Owner Module, Dashboard, and Login & Registration system**.  
-This included **frontend, backend, and database integration** for these modules.
 
 ---
 
@@ -43,5 +37,26 @@ This included **frontend, backend, and database integration** for these modules.
 ## ⚡ Getting Started
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/airport-management-system.git
+git clone https://github.com/Steive-URK21CS1188/airport-management-system.git
 cd airport-management-system
+```
+### 2. Backend Setup
+```bash
+cd backend
+mvn clean install
+mvn spring-boot:run
+```
+Backend runs at: http://localhost:8081
+### 3. Frontend Setup
+```bash
+cd frontend
+npm install
+npm run dev
+```
+Frontend runs at: http://localhost:5173
+### 4. Eureka Server
+```bash
+cd eureka-server
+mvn spring-boot:run
+```
+Eureka Dashboard: http://localhost:8761/
