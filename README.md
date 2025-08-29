@@ -58,7 +58,36 @@ A **Full-stack web application** designed to streamline airport operations by ma
 ---
 
 ## 📸 Screenshots
-(Add a few screenshots of your app here for better presentation)
+
+### Homepage
+
+![homepage](https://github.com/user-attachments/assets/dc9ffba6-6ef0-4767-99a0-addaabfe90e6)
+
+### Registration/Login
+
+![register](https://github.com/user-attachments/assets/87197ac7-d096-42f7-ab4d-64ba0d5cf423)
+
+![login](https://github.com/user-attachments/assets/1e5c4eb9-1d13-4839-a22d-18063bf04f72)
+
+### Plane Module
+
+![plane](https://github.com/user-attachments/assets/4160721a-49a4-4e61-8c4b-9fc2c187bd5e)
+
+### Pilot Module
+
+![pilot](https://github.com/user-attachments/assets/153716c1-3d23-4eda-b3b7-f97b3b431da5)
+
+### Hangar Module
+
+![hangar](https://github.com/user-attachments/assets/fd38215c-0d15-4c13-ba48-6f465aa96ab1)
+
+### Plane Allocation Module
+
+![plane alloc](https://github.com/user-attachments/assets/752bafe4-3723-4521-98f4-bb404cee544f)
+
+### Hangar Allocation Module
+
+![hangar alloc](https://github.com/user-attachments/assets/2a492176-50b6-4122-baaf-ca82985221b4)
 
 ---
 
