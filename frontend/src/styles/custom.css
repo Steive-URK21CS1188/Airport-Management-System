@@ -1,0 +1,41 @@
+:root {
+  --primary-color: #166ac9;
+  --secondary-color: #e0e7ff;
+  --background-color: #f9f9f9;
+  --text-primary: #111418;
+  --text-secondary: #637488;
+  --accent-color: #c7d2fe;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-primary);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.hero {
+  height: 60vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 50px;
+  border-radius: 8px;
+}
+/* Hover link effect */
+.nav-link:hover {
+  color: #0d6efd !important;
+}
+
+/* Card hover effect */
+.hover-scale {
+  transition: transform 0.2s ease-in-out;
+}
+.hover-scale:hover {
+  transform: scale(1.05);
+}

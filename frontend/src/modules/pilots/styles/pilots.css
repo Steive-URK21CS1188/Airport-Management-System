@@ -1,0 +1,135 @@
+/* ===== Main Page Card ===== */
+.pilots-card {
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+  background: linear-gradient(to bottom right, #ffffff, #f9f9f9);
+  padding: 20px;
+}
+
+.pilots-card .card-title {
+  font-weight: bold;
+  font-size: 1.6rem;
+  color: #0077b6;
+  margin-bottom: 20px;
+}
+
+/* ===== Table Styling ===== */
+.table {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.table thead {
+  background: #0077b6;
+  color: white;
+  font-weight: bold;
+}
+
+.table th,
+.table td {
+  vertical-align: middle;
+  padding: 14px;
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(0, 119, 182, 0.05);
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* ===== Buttons ===== */
+.btn-group .btn {
+  min-width: 80px;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-group .btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background-color: #0077b6;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #023e8a;
+}
+
+.btn-danger {
+  background-color: #d62828;
+  border: none;
+}
+
+.btn-danger:hover {
+  background-color: #a4161a;
+}
+
+.btn-success {
+  background-color: #2a9d8f;
+  border: none;
+}
+
+.btn-success:hover {
+  background-color: #1e7166;
+}
+
+/* ===== Modal Styling ===== */
+.modal-content {
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.modal-header {
+  border-bottom: none;
+  padding: 15px 20px;
+}
+
+.modal-title {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.modal-footer {
+  border-top: none;
+  padding: 15px 20px;
+}
+
+/* ===== Form Styling ===== */
+.form-label {
+  font-weight: 600;
+  color: #333;
+}
+
+.form-control {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 10px 12px;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #0077b6;
+  box-shadow: 0 0 0 3px rgba(0, 119, 182, 0.25);
+}
+.is-invalid {
+  border-color: #dc3545 !important;
+  box-shadow: 0 0 0 0.15rem rgba(220, 53, 69, 0.25) !important;
+}
+.invalid-feedback {
+  font-size: 0.85rem;
+}
+
+.pilot-title {
+  font-family: 'Roboto', sans-serif; /* choose your preferred font */
+  font-weight: 700;
+  font-size: 2.25rem; /* optional, keep existing size */
+  color: var(--primary-color);
+  text-align: center;
+}

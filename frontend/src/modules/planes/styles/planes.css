@@ -1,0 +1,89 @@
+/* Planes.css (Scoped to Planes Page) */
+
+.planes-page {
+  --primary-color: #0d6efd;
+  --secondary-color: #6c757d;
+  --bg-color: #f8f9fa;
+  --table-header-bg: #e9ecef;
+  --table-row-hover: #dee2e6;
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.planes-page h2 {
+  color: var(--primary-color);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.planes-page table {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.planes-page table thead {
+  background-color: var(--table-header-bg);
+  font-weight: bold;
+}
+
+.planes-page table th,
+.planes-page table td {
+  text-align: center;
+  padding: 12px;
+  vertical-align: middle;
+}
+
+.planes-page table tbody tr:hover {
+  background-color: var(--table-row-hover);
+  transition: 0.2s;
+}
+
+.planes-page button {
+  min-width: 80px;
+}
+
+.planes-page button.me-2 {
+  margin-right: 10px !important;
+}
+
+/* Modal Styling */
+.planes-page .modal-content {
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.planes-page .modal-header {
+  background-color: var(--primary-color);
+  color: white;
+  border-bottom: none;
+}
+
+.planes-page .modal-footer {
+  border-top: none;
+}
+
+.planes-page .form-label {
+  font-weight: 500;
+}
+
+.planes-page .spinner-border {
+  display: block;
+  margin: 50px auto;
+}
+
+/* Tabs Styling */
+.planes-page .nav-tabs .nav-link.active {
+  background-color: var(--primary-color);
+  color: white !important;
+  border-color: var(--primary-color);
+  border-radius: 8px 8px 0 0;
+}
+
+.planes-page .nav-tabs .nav-link {
+  border-radius: 8px 8px 0 0;
+}

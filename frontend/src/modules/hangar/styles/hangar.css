@@ -1,0 +1,190 @@
+/* Scope all Hangar styles */
+.hangar-page {
+
+  --font-family: 'sans-serif';
+  --primary-color: #166ac9;
+  --secondary-color: #0f52a7;
+  --background-color: #f0f2f7;
+  --card-bg: #ffffff;
+  --text-primary: #111418;
+  --text-secondary: #637488;
+  --hover-color: #e3f2fd;
+  --input-border: #ced4da;
+}
+
+/* hangar.css */
+.hangar-title {
+  font-family: 'Roboto', sans-serif; /* choose your preferred font */
+  font-weight: 700;
+  font-size: 2.25rem; /* optional, keep existing size */
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.hangar-page body {
+  background-color: var(--background-color);
+  color: var(--text-primary);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.hangar-page .container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 20px;
+}
+
+.hangar-page .card {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+  border: none;
+  transition: transform 0.2s ease;
+}
+
+.hangar-page .card:hover {
+  transform: translateY(-3px);
+}
+
+.hangar-page h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.hangar-page .input-group .form-control {
+  border-radius: 8px 0 0 8px;
+  border: 1px solid var(--input-border);
+}
+
+.hangar-page .input-group .btn {
+  border-radius: 0 8px 8px 0;
+  transition: all 0.2s ease;
+}
+
+.hangar-page .input-group .btn:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.hangar-page .table {
+  background-color: var(--card-bg);
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.hangar-page th {
+  background-color: #0a75ef; /* soft blue shade */
+  color: #fff;
+  font-weight: 600;
+}
+
+.hangar-page td,
+.hangar-page th {
+  padding: 14px 12px;
+  text-align: center;
+}
+
+.hangar-page tr:hover {
+  background-color: var(--hover-color);
+  transition: all 0.2s ease-in-out;
+}
+
+.hangar-page .btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.hangar-page .btn-primary {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.hangar-page .btn-primary:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-1px);
+}
+
+.hangar-page .btn-success {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.hangar-page .btn-success:hover {
+  background-color: #218838;
+}
+
+.hangar-page .btn-warning {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.hangar-page .btn-warning:hover {
+  background-color: #e0a800;
+}
+
+.hangar-page .btn-danger {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.hangar-page .btn-danger:hover {
+  background-color: #c82333;
+}
+
+.hangar-page .modal-content {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.2);
+  padding: 1rem;
+}
+
+.hangar-page .modal-header {
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  color: #fff;
+  border-bottom: none;
+  border-radius: 16px 16px 0 0;
+}
+
+.hangar-page .modal-footer {
+  border-top: none;
+  justify-content: center;
+}
+
+.hangar-page .modal.show {
+  background-color: rgba(0,0,0,0.4);
+}
+
+.hangar-page .btn-info {
+  background-color: #17a2b8; /* soft blue */
+  color: #fff;
+}
+
+.hangar-page .btn-info:hover {
+  background-color: #138496;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .hangar-page .table-responsive {
+    overflow-x: auto;
+  }
+
+  .hangar-page .input-group {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

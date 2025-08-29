@@ -1,0 +1,257 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 264241152 bytes. Error detail: G1 virtual space
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   This process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Zero Based Compressed Oops mode in which the Java heap is
+#     placed in the first 32GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 32GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3631), pid=2256, tid=13400
+#
+# JRE version:  (22.0.1+8) (build )
+# Java VM: OpenJDK 64-Bit Server VM (22.0.1+8, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dfile.encoding=UTF-8 -Dstdout.encoding=UTF-8 -Dstderr.encoding=UTF-8 -XX:+ShowCodeDetailsInExceptionMessages com.API_gateway.API_gateway.ApiGatewayApplication
+
+Host: 12th Gen Intel(R) Core(TM) i7-1255U, 12 cores, 15G,  Windows 11 , 64 bit Build 26100 (10.0.26100.4768)
+Time: Tue Jul 29 13:21:21 2025 India Standard Time elapsed time: 1.189275 seconds (0d 0h 0m 1s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001916d1e9f30):  JavaThread "Unknown thread" [_thread_in_vm, id=13400, stack(0x000000898fc00000,0x000000898fd00000) (1024K)]
+
+Stack: [0x000000898fc00000,0x000000898fd00000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x6ea239]  (no source info available)
+V  [jvm.dll+0x8ccf93]  (no source info available)
+V  [jvm.dll+0x8cf3be]  (no source info available)
+V  [jvm.dll+0x8cfa93]  (no source info available)
+V  [jvm.dll+0x286ea6]  (no source info available)
+V  [jvm.dll+0x6e68c5]  (no source info available)
+V  [jvm.dll+0x6db54a]  (no source info available)
+V  [jvm.dll+0x3601ba]  (no source info available)
+V  [jvm.dll+0x368686]  (no source info available)
+V  [jvm.dll+0x3ba43e]  (no source info available)
+V  [jvm.dll+0x3ba6e8]  (no source info available)
+V  [jvm.dll+0x333cbc]  (no source info available)
+V  [jvm.dll+0x334878]  (no source info available)
+V  [jvm.dll+0x894ebc]  (no source info available)
+V  [jvm.dll+0x3c7531]  (no source info available)
+V  [jvm.dll+0x87dc3c]  (no source info available)
+V  [jvm.dll+0x460e3e]  (no source info available)
+V  [jvm.dll+0x462c51]  (no source info available)
+C  [jli.dll+0x5278]  (no source info available)
+C  [ucrtbase.dll+0x37b0]  (no source info available)
+C  [KERNEL32.DLL+0x2e8d7]  (no source info available)
+C  [ntdll.dll+0x3c34c]  (no source info available)
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ffeaa5dc688, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+Total: 0
+
+Other Threads:
+  0x000001916f4d3d30 WorkerThread "GC Thread#0"                     [id=19696, stack(0x000000898fd00000,0x000000898fe00000) (1024K)]
+  0x000001916f4e4830 ConcurrentGCThread "G1 Main Marker"            [id=3564, stack(0x000000898fe00000,0x000000898ff00000) (1024K)]
+  0x000001916f4e6a00 WorkerThread "G1 Conc#0"                       [id=38092, stack(0x000000898ff00000,0x0000008990000000) (1024K)]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffea9cc6b17]
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00007ffeaa6600a8] Heap_lock - owner thread: 0x000001916d1e9f30
+
+Heap address: 0x0000000704e00000, size: 4018 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 1.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+ CardTable entry size: 512
+ Card Set container configuration: InlinePtr #cards 4 size 8 Array Of Cards #cards 16 size 48 Howl #buckets 8 coarsen threshold 3686 Howl Bitmap #cards 512 size 80 coarsen threshold 460 Card regions per heap region 1 cards per card region 4096
+
+Heap:
+ garbage-first heap   total reserved 4114432K, committed 0K, used 0K [0x0000000704e00000, 0x0000000800000000)
+  region size 2048K, 0 young (0K), 0 survivors (0K)
+
+[error occurred during error reporting (printing heap information), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffeaa0c6e29]
+GC Heap History (0 events):
+No events
+
+Dll operation events (1 events):
+Event: 0.009 Loaded shared library C:\Users\arisa\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_22.0.1.v20240426-1149\jre\bin\java.dll
+
+Deoptimization events (0 events):
+No events
+
+Classes loaded (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+ZGC Phase Switch (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff768fa0000 - 0x00007ff768fae000 	C:\Users\arisa\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_22.0.1.v20240426-1149\jre\bin\javaw.exe
+0x00007fff890e0000 - 0x00007fff89347000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007fff88f20000 - 0x00007fff88fe9000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007fff86210000 - 0x00007fff86600000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007fff869c0000 - 0x00007fff86b0b000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007fff6e780000 - 0x00007fff6e79b000 	C:\Users\arisa\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_22.0.1.v20240426-1149\jre\bin\VCRUNTIME140.dll
+0x00007fff6e7f0000 - 0x00007fff6e807000 	C:\Users\arisa\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_22.0.1.v20240426-1149\jre\bin\jli.dll
+0x00007fff88a80000 - 0x00007fff88c45000 	C:\WINDOWS\System32\USER32.dll
+0x00007fff6d580000 - 0x00007fff6d81a000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.26100.4768_none_3e0c112ce331287c\COMCTL32.dll
+0x00007fff86610000 - 0x00007fff86637000 	C:\WINDOWS\System32\win32u.dll
+0x00007fff88ff0000 - 0x00007fff89099000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007fff886a0000 - 0x00007fff886cb000 	C:\WINDOWS\System32\GDI32.dll
+0x00007fff86640000 - 0x00007fff86778000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007fff86ba0000 - 0x00007fff86c43000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007fff88c50000 - 0x00007fff88c7f000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007fff4a030000 - 0x00007fff4a03c000 	C:\Users\arisa\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_22.0.1.v20240426-1149\jre\bin\vcruntime140_1.dll
+0x00007fff17f80000 - 0x00007fff1800e000 	C:\Users\arisa\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_22.0.1.v20240426-1149\jre\bin\msvcp140.dll
+0x00007ffea9980000 - 0x00007ffeaa742000 	C:\Users\arisa\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_22.0.1.v20240426-1149\jre\bin\server\jvm.dll
+0x00007fff87310000 - 0x00007fff873c4000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007fff874c0000 - 0x00007fff87566000 	C:\WINDOWS\System32\sechost.dll
+0x00007fff87cc0000 - 0x00007fff87dd8000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007fff88730000 - 0x00007fff887a4000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007fff86070000 - 0x00007fff860ce000 	C:\WINDOWS\SYSTEM32\POWRPROF.dll
+0x00007fff83ac0000 - 0x00007fff83af5000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007fff6e960000 - 0x00007fff6e96b000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007fff86050000 - 0x00007fff86064000 	C:\WINDOWS\SYSTEM32\UMPDC.dll
+0x00007fff84ef0000 - 0x00007fff84f0b000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007fff82850000 - 0x00007fff8285a000 	C:\Users\arisa\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_22.0.1.v20240426-1149\jre\bin\jimage.dll
+0x00007fff837d0000 - 0x00007fff83a11000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007fff86e70000 - 0x00007fff871f5000 	C:\WINDOWS\System32\combase.dll
+0x00007fff873d0000 - 0x00007fff874b0000 	C:\WINDOWS\System32\OLEAUT32.dll
+0x00007fff83a70000 - 0x00007fff83ab3000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007fff86dd0000 - 0x00007fff86e69000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007fff720c0000 - 0x00007fff720de000 	C:\Users\arisa\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_22.0.1.v20240426-1149\jre\bin\java.dll
+0x00007fff87570000 - 0x00007fff87cbd000 	C:\WINDOWS\System32\SHELL32.dll
+0x00007fff86840000 - 0x00007fff869b3000 	C:\WINDOWS\System32\wintypes.dll
+0x00007fff882f0000 - 0x00007fff88490000 	C:\WINDOWS\System32\ole32.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Users\arisa\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_22.0.1.v20240426-1149\jre\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.26100.4768_none_3e0c112ce331287c;C:\Users\arisa\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_22.0.1.v20240426-1149\jre\bin\server
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF-8 -Dstdout.encoding=UTF-8 -Dstderr.encoding=UTF-8 -XX:+ShowCodeDetailsInExceptionMessages 
+java_command: com.API_gateway.API_gateway.ApiGatewayApplication
+java_class_path (initial): C:\Users\arisa\eclipse-workspace\Microservices\API-gateway\API-gateway\target\classes;C:\Users\arisa\.m2\repository\org\springframework\cloud\spring-cloud-starter-gateway-server-webflux\4.3.0\spring-cloud-starter-gateway-server-webflux-4.3.0.jar;C:\Users\arisa\.m2\repository\org\springframework\cloud\spring-cloud-starter\4.3.0\spring-cloud-starter-4.3.0.jar;C:\Users\arisa\.m2\repository\org\springframework\cloud\spring-cloud-context\4.3.0\spring-cloud-context-4.3.0.jar;C:\Users\arisa\.m2\repository\org\springframework\security\spring-security-crypto\6.5.2\spring-security-crypto-6.5.2.jar;C:\Users\arisa\.m2\repository\org\springframework\cloud\spring-cloud-commons\4.3.0\spring-cloud-commons-4.3.0.jar;C:\Users\arisa\.m2\repository\org\bouncycastle\bcprov-jdk18on\1.80\bcprov-jdk18on-1.80.jar;C:\Users\arisa\.m2\repository\org\springframework\cloud\spring-cloud-gateway-server-webflux\4.3.0\spring-cloud-gateway-server-webflux-4.3.0.jar;C:\Users\arisa\.m2\repository\org\springframework\cloud\spring-cloud-gateway-server\4.3.0\spring-cloud-gateway-server-4.3.0.jar;C:\Users\arisa\.m2\repository\org\springframework\boot\spring-boot-starter-validation\3.5.4\spring-boot-starter-validation-3.5.4.jar;C:\Users\arisa\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.43\tomcat-embed-el-10.1.43.jar;C:\Users\arisa\.m2\repository\org\hibernate\validator\hibernate-validator\8.0.2.Final\hibernate-validator-8.0.2.Final.jar;C:\Users\arisa\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.2\jakarta.validation-api-3.0.2.jar;C:\Users\arisa\.m2\repository\org\jboss\logging\jboss-logging\3.6.1.Final\jboss-logging-3.6.1.Final.jar;C:\Users\arisa\.m2\repository\com\fasterxml\classmate\1.7.0\classmate-1.7.0.jar;C:\Users\arisa\.m2\repository\io\projectreactor\addons\reactor-extra\3.5.2\reactor-extra-3.5.2.jar;C:\Users\arisa\.m2\repository\org\springframework\boot\spring-boot-starter-webflux\3.5.4\spring-boot-starter-webflux-3.5.4.jar;C:\Users\arisa\.m2\repository\org\springframework\boot\spring-boot-starter-json\3.5.4\spring-boot-starter-json-3.5.4.jar;C:\Users\arisa\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.19.2\jackson-datatype-jdk8-2.19.2.jar;C:\Users\arisa\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.19.2\jackson-datatype-jsr310-2.19.2.jar;C:\Users\arisa\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.19.2\jackson-module-parameter-names-2.19.2.jar;C:\Users\arisa\.m2\repository\org\springframework\boot\spring-boot-starter-reactor-netty\3.5.4\spring-boot-starter-reactor-netty-3.5.4.jar;C:\Users\arisa\.m2\repository\io\projectreactor\netty\reactor-netty-http\1.2.8\reactor-netty-http-1.2.8.jar;C:\Users\arisa\.m2\repository\io\netty\netty-codec-http\4.1.123.Final\netty-codec-http-4.1.123.Final.jar;C:\Users\arisa\.m2\repository\io\netty\netty-common\4.1.123.Final\netty-common-4.1.123.Final.jar;C:\Users\arisa\.m2\repository\io\netty\netty-buffer\4.1.123.Final\netty-buffer-4.1.123.Final.jar;C:\Users\arisa\.m2\repository\io\netty\netty-transport\4.1.123.Final\netty-transport-4.1.123.Final.jar;C:\Users\arisa\.m2\repository\io\netty\netty-codec\4.1.123.Final\netty-codec-4.1.123.Final.jar;C:\Users\arisa\.m2\repository\io\netty\netty-handler\4.1.123.Final\netty-handler-4.1.123.Final.jar;C:\Users\arisa\.m2\repository\io\netty\netty-codec-http2\4.1.123.Final\netty-codec-http2-4.1.123.Final.jar;C:\Users\arisa\.m2\repository\io\netty\netty-resolver-dns\4.1.123.Final\netty-resolver-dns-4.1.123.Final.jar;C:\Users\arisa\.m2\repository\io\netty\netty-resolver\4.1.123.Final\netty-resolver-4.1.123.Final.jar;C:\Users\arisa\.m2\repository\io\netty\netty-codec-dns\4.1.123.Final\netty-codec-dns-4.1.123.Final.jar;C:\Users\arisa\.m2\repository\io\netty\netty-resolver-dns-native-macos\4.1.123.Final\netty-resolver-dns-native-macos-4.1.123.Final-osx-x86_64.jar;C:\Users\arisa\.m2\repository\io\netty\netty-resolver-dns-classes-macos\4.1.123.Final\netty-resolver-dns-classes-macos-4.1.123.Final.jar;C:\Users\arisa\.m2\repository\io\netty\netty-transport-native-epoll\4.1.123.Final\netty-transport-native-epoll-4.1.123.Final-linux-x86_64.jar;C:\Users\arisa\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.123.Final\netty-transport-native-unix-common-4.1.123.Final.jar;C:\Users\arisa\.m2\repository\io\netty\netty-transport-classes-epoll\4.1.123.Final\netty-transport-classes-epoll-4.1.123.Final.jar;C:\Users\arisa\.m2\repository\io\projectreactor\netty\reactor-netty-core\1.2.8\reactor-netty-core-1.2.8.jar;C:\Users\arisa\.m2\repository\io\netty\netty-handler-proxy\4.1.123.Final\netty-handler-proxy-4.1.123.Final.jar;C:\Users\arisa\.m2\repository\io\netty\netty-codec-socks\4.1.123.Final\netty-codec-socks-4.1.123.Final.jar;C:\Users\arisa\.m2\repository\org\springframework\spring-web\6.2.9\spring-web-6.2.9.jar;C:\Users\arisa\.m2\repository\org\springframework\spring-beans\6.2.9\spring-beans-6.2.9.jar;C:\Users\arisa\.m2\repository\io\micrometer\micrometer-observation\1.15.2\micrometer-observation-1.15.2.jar;C:\Users\arisa\.m2\repository\io\micrometer\micrometer-commons\1.15.2\micrometer-commons-1.15.2.jar;C:\Users\arisa\.m2\repository\org\springframework\spring-webflux\6.2.9\spring-webflux-6.2.9.jar;C:\Users\arisa\.m2\repository\io\projectreactor\reactor-core\3.7.8\reactor-core-3.7.8.jar;C:\Users\arisa\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\Users\arisa\.m2\repository\org\springframework\boot\spring-boot-properties-migrator\3.5.4\spring-boot-properties-migrator-3.5.4.jar;C:\Users\arisa\.m2\repository\org\springframework\boot\spring-boot\3.5.4\spring-boot-3.5.4.jar;C:\Users\arisa\.m2\repository\org\springframework\spring-context\6.2.9\spring-context-6.2.9.jar;C:\Users\arisa\.m2\repository\org\springframework\spring-aop\6.2.9\spring-aop-6.2.9.jar;C:\Users\arisa\.m2\repository\org\springframework\spring-expression\6.2.9\spring-expression-6.2.9.jar;C:\Users\arisa\.m2\repository\org\springframework\boot\spring-boot-configuration-metadata\3.5.4\spring-boot-configuration-metadata-3.5.4.jar;C:\Users\arisa\.m2\repository\org\springframework\cloud\spring-cloud-starter-netflix-eureka-client\4.3.0\spring-cloud-starter-netflix-eureka-client-4.3.0.jar;C:\Users\arisa\.m2\repository\org\springframework\cloud\spring-cloud-netflix-eureka-client\4.3.0\spring-cloud-netflix-eureka-client-4.3.0.jar;C:\Users\arisa\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.5\httpclient5-5.5.jar;C:\Users\arisa\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.3.4\httpcore5-5.3.4.jar;C:\Users\arisa\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.3.4\httpcore5-h2-5.3.4.jar;C:\Users\arisa\.m2\repository\com\netflix\eureka\eureka-client\2.0.4\eureka-client-2.0.4.jar;C:\Users\arisa\.m2\repository\com\thoughtworks\xstream\xstream\1.4.20\xstream-1.4.20.jar;C:\Users\arisa\.m2\repository\io\github\x-stream\mxparser\1.2.2\mxparser-1.2.2.jar;C:\Users\arisa\.m2\repository\xmlpull\xmlpull\1.1.3.1\xmlpull-1.1.3.1.jar;C:\Users\arisa\.m2\repository\jakarta\ws\rs\jakarta.ws.rs-api\3.1.0\jakarta.ws.rs-api-3.1.0.jar;C:\Users\arisa\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\arisa\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\arisa\.m2\repository\com\netflix\spectator\spectator-api\1.7.3\spectator-api-1.7.3.jar;C:\Users\arisa\.m2\repository\org\slf4j\slf4j-api\2.0.17\slf4j-api-2.0.17.jar;C:\Users\arisa\.m2\repository\org\apache\httpcomponents\httpclient\4.5.3\httpclient-4.5.3.jar;C:\Users\arisa\.m2\repository\org\apache\httpcomponents\httpcore\4.4.16\httpcore-4.4.16.jar;C:\Users\arisa\.m2\repository\commons-codec\commons-codec\1.18.0\commons-codec-1.18.0.jar;C:\Users\arisa\.m2\repository\commons-configuration\commons-configuration\1.10\commons-configuration-1.10.jar;C:\Users\arisa\.m2\repository\commons-lang\commons-lang\2.6\commons-lang-2.6.jar;C:\Users\arisa\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.19.2\jackson-annotations-2.19.2.jar;C:\Users\arisa\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.19.2\jackson-core-2.19.2.jar;C:\Users\arisa\.m2\repository\com\netflix\netflix-commons\netflix-eventbus\0.3.0\netflix-eventbus-0.3.0.jar;C:\Users\arisa\.m2\repository\com\netflix\netflix-commons\netflix-infix\0.3.0\netflix-infix-0.3.0.jar;C:\Users\arisa\.m2\repository\commons-jxpath\commons-jxpath\1.3\commons-jxpath-1.3.jar;C:\Users\arisa\.m2\repository\joda-time\joda-time\2.3\joda-time-2.3.jar;C:\Users\arisa\.m2\repository\org\antlr\antlr-runtime\3.4\antlr-runtime-3.4.jar;C:\Users\arisa\.m2\repository\org\antlr\stringtemplate\3.2.1\stringtemplate-3.2.1.jar;C:\Users\arisa\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\arisa\.m2\repository\com\google\guava\guava\14.0.1\guava-14.0.1.jar;C:\Users\arisa\.m2\repository\com\google\code\gson\gson\2.13.1\gson-2.13.1.jar;C:\Users\arisa\.m2\repository\com\google\errorprone\error_prone_annotations\2.38.0\error_prone_annotations-2.38.0.jar;C:\Users\arisa\.m2\repository\com\netflix\servo\servo-core\0.5.3\servo-core-0.5.3.jar;C:\Users\arisa\.m2\repository\org\apache\commons\commons-math\2.2\commons-math-2.2.jar;C:\Users\arisa\.m2\repository\javax\annotation\javax.annotation-api\1.2\javax.annotation-api-1.2.jar;C:\Users\arisa\.m2\repository\org\codehaus\jettison\jettison\1.5.4\jettison-1.5.4.jar;C:\Users\arisa\.m2\repository\org\springframework\cloud\spring-cloud-starter-loadbalancer\4.3.0\spring-cloud-starter-loadbalancer-4.3.0.jar;C:\Users\arisa\.m2\repository\org\springframework\cloud\spring-cloud-loadbalancer\4.3.0\spring-cloud-loadbalancer-4.3.0.jar;C:\Users\arisa\.m2\repository\org\springframework\boot\spring-boot-starter-cache\3.5.4\spring-boot-starter-cache-3.5.4.jar;C:\Users\arisa\.m2\repository\org\springframework\spring-context-support\6.2.9\spring-context-support-6.2.9.jar;C:\Users\arisa\.m2\repository\com\stoyanr\evictor\1.0.0\evictor-1.0.0.jar;C:\Users\arisa\.m2\repository\io\jsonwebtoken\jjwt-api\0.11.5\jjwt-api-0.11.5.jar;C:\Users\arisa\.m2\repository\io\jsonwebtoken\jjwt-impl\0.11.5\jjwt-impl-0.11.5.jar;C:\Users\arisa\.m2\repository\io\jsonwebtoken\jjwt-jackson\0.11.5\jjwt-jackson-0.11.5.jar;C:\Users\arisa\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.19.2\jackson-databind-2.19.2.jar;C:\Users\arisa\.m2\repository\org\springframework\boot\spring-boot-starter\3.5.4\spring-boot-starter-3.5.4.jar;C:\Users\arisa\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\3.5.4\spring-boot-autoconfigure-3.5.4.jar;C:\Users\arisa\.m2\repository\org\springframework\boot\spring-boot-starter-logging\3.5.4\spring-boot-starter-logging-3.5.4.jar;C:\Users\arisa\.m2\repository\ch\qos\logback\logback-classic\1.5.18\logback-classic-1.5.18.jar;C:\Users\arisa\.m2\repository\ch\qos\logback\logback-core\1.5.18\logback-core-1.5.18.jar;C:\Users\arisa\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.24.3\log4j-to-slf4j-2.24.3.jar;C:\Users\arisa\.m2\repository\org\apache\logging\log4j\log4j-api\2.24.3\log4j-api-2.24.3.jar;C:\Users\arisa\.m2\repository\org\slf4j\jul-to-slf4j\2.0.17\jul-to-slf4j-2.0.17.jar;C:\Users\arisa\.m2\repository\org\yaml\snakeyaml\2.4\snakeyaml-2.4.jar;C:\Users\arisa\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\arisa\.m2\repository\org\springframework\spring-core\6.2.9\spring-core-6.2.9.jar;C:\Users\arisa\.m2\repository\org\springframework\spring-jcl\6.2.9\spring-jcl-6.2.9.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 3                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 10                                        {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 2097152                                   {product} {ergonomic}
+   size_t InitialHeapSize                          = 264241152                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 4213178368                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 2097152                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5839372                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122909434                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122909434                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool ShowCodeDetailsInExceptionMessages       = true                                   {manageable} {command line}
+   size_t SoftMaxHeapSize                          = 4213178368                             {manageable} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags foldmultilines=false
+ #1: stderr all=off uptime,level,tags foldmultilines=false
+
+Environment Variables:
+PATH=C:/Users/arisa/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_22.0.1.v20240426-1149/jre/bin/server;C:/Users/arisa/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_22.0.1.v20240426-1149/jre/bin;C:\Softwares\WINDOWS.X64_193000_db_home\bin;C:\Program Files\Microsoft\jdk-11.0.20.8-hotspot\bin;C:\Users\arisa\Downloads\WINDOWS.X64_193000_db_home\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files (x86)\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\Microsoft SQL Server\160\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\160\DTS\Binn\;C:\Program Files\Azure Data Studio\bin;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\ProgramData\chocolatey\bin;C:\Users\arisa\AppData\Local\Android\Sdk\platform-tools;C:\Program Files\nodejs\;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\arisa\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Azure Data Studio\bin;C:\Users\arisa\.dotnet\tools;C:\Users\arisa\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\nodejs;C:\Users\arisa\AppData\Roaming\npm;C:\Users\arisa\AppData\Local\GitHubDesktop\bin;;C:\WINDOWS\System32;
+USERNAME=arisa
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 154 Stepping 4, GenuineIntel
+TMP=C:\Users\arisa\AppData\Local\Temp
+TEMP=C:\Users\arisa\AppData\Local\Temp
+
+
+
+
+Periodic native trim disabled
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 11 , 64 bit Build 26100 (10.0.26100.4768)
+OS uptime: 5 days 11:17 hours
+Hyper-V role detected
+
+CPU: total 12 (initial active 12) (6 cores per cpu, 2 threads per core) family 6 model 154 stepping 4 microcode 0x435, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, erms, clmul, bmi1, bmi2, adx, sha, fma, vzeroupper, clflush, clflushopt, clwb, hv, serialize, rdtscp, rdpid, fsrm, f16c, cet_ibt, cet_ss
+Processor Information for processor 0
+  Max Mhz: 1700, Current Mhz: 1700, Mhz Limit: 1700
+Processor Information for processor 1
+  Max Mhz: 1700, Current Mhz: 1700, Mhz Limit: 1700
+Processor Information for processor 2
+  Max Mhz: 1700, Current Mhz: 1700, Mhz Limit: 1700
+Processor Information for processor 3
+  Max Mhz: 1700, Current Mhz: 1700, Mhz Limit: 1700
+Processor Information for processor 4
+  Max Mhz: 1700, Current Mhz: 1200, Mhz Limit: 1190
+Processor Information for processor 5
+  Max Mhz: 1700, Current Mhz: 1200, Mhz Limit: 1190
+Processor Information for processor 6
+  Max Mhz: 1700, Current Mhz: 1200, Mhz Limit: 1190
+Processor Information for processor 7
+  Max Mhz: 1700, Current Mhz: 1200, Mhz Limit: 1190
+Processor Information for processor 8
+  Max Mhz: 1700, Current Mhz: 1200, Mhz Limit: 1190
+Processor Information for processor 9
+  Max Mhz: 1700, Current Mhz: 1200, Mhz Limit: 1190
+Processor Information for processor 10
+  Max Mhz: 1700, Current Mhz: 1200, Mhz Limit: 1190
+Processor Information for processor 11
+  Max Mhz: 1700, Current Mhz: 1200, Mhz Limit: 1190
+
+Memory: 4k page, system-wide physical 16068M (986M free)
+TotalPageFile size 65220M (AvailPageFile size 235M)
+current process WorkingSet (physical memory assigned to process): 14M, peak: 14M
+current process commit charge ("private bytes"): 65M, peak: 316M
+
+vm_info: OpenJDK 64-Bit Server VM (22.0.1+8) for windows-amd64 JRE (22.0.1+8), built on 2024-04-16T00:00:00Z by "admin" with MS VC++ 17.7 (VS2022)
+
+END.
