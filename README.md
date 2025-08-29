@@ -1,6 +1,7 @@
 # ✈️ Airport Management System  
 
-A **full-stack web application** designed to streamline airport operations by managing planes, pilots, hangars, and allocations built using **Spring Boot (Java), React.js, MySQL, TailwindCSS, and Eureka for microservices discovery**.  
+A **Full-stack web application** designed to streamline airport operations by managing planes, pilots, hangars, and allocations built using **Spring Boot (Java), React.js, MySQL, TailwindCSS, and Eureka for microservices discovery**.  
+
 ---
 
 ## 🛠️ Tech Stack
